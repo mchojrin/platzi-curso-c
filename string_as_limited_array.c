@@ -2,7 +2,7 @@
 
 int main()
 {
-	char name[] = "Mauro Uriel Chojrin";
+	char name[19] = "Mauro Uriel Chojrin";
 
 	printf("Mi nombre es %s\n", name);
 
