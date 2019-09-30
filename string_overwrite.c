@@ -2,9 +2,9 @@
 
 int main()
 {
-	char name[5] = "Mauro";
-	char lastName[] = "Chojrin";
-
+	char city[] = "Buenos Aires";
+	char name[19] = "Mauro Uriel Chojrin";
+	
 	printf("Mi nombre es %s\n", name);
 
 	return 0;
