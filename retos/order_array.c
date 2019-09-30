@@ -14,7 +14,8 @@ int main()
 	int array[10], i, j;
 
 	for ( i = 0; i < 10; i++ ) {
-		array[i] = 10 - i;
+		printf( "Ingrese un numero\n" );
+		scanf( "%d", array + i );
 	}
 
 	print_array( array );
