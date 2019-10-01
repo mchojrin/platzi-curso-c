@@ -7,9 +7,34 @@ typedef struct Node {
 	struct Node * next;
 } NODE;
 
+void addNode( NODE ** start, NODE * newNode ) 
+{
+	if ( *start ) {
+		NODE * current = *start;
+		while ( current->next ) {
+			current = current->next;
+		}
+
+		current->next = newNode;
+	} else {
+		*start = newNode;
+	}
+}
+
+NODE * createNode( int number )
+{
+	NODE * newNode;
+	
+	newNode = malloc( sizeof( NODE ) );
+	newNode->next = NULL;
+	newNode->number = number;
+
+	return newNode;
+}
+
 int main( int argc, const char * argv[] )
 {
-	NODE * start, * current = NULL;
+	NODE * start = NULL, * current;
 	char goOn;
 	int listSize = 0, number;
 	
@@ -17,20 +42,12 @@ int main( int argc, const char * argv[] )
 		printf( "La lista contiene %d nodos. Ingrese el siguiente numero (0 para finalizar): ", listSize );
 		scanf("%d", &number);
 		if ( number ) {
-			NODE * newNode = malloc( sizeof( NODE ) );
-			newNode->number = number;
-			newNode->next = NULL;
-			if ( listSize++ ) {
-				current->next = newNode;
-				current = newNode;
-			} else {
-				start = current = newNode;
-			}
+			addNode( &start, createNode( number ) );
 		}
 	} while ( number );
 
 	current = start;
-	printf( "La lista contiene los siguientes numeros: " );
+	printf( "\nLa lista contiene los siguientes numeros: " );
 	while ( current ) {
 		printf( "%d", current->number );
 		printf( current->next ? ", " : "\n" );
@@ -41,6 +58,7 @@ int main( int argc, const char * argv[] )
 
 	NODE * next;
 	while ( current ) {
+		printf( "Liberando el nodo %d\n", current->number );
 		next = current->next;
 		free(current);
 		current = next;
