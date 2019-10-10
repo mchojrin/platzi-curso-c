@@ -2,13 +2,13 @@
  
 int main()
 {
-	  int c = 1;  
-	    while (c <= 10) {
-		        printf("%d ", c);
-			    c++;
-			      }
+	int c = 1;  
+	while (c <= 10) {
+		printf("%d ", c);
+		c++;
+	}
 	     
-	      return 0;
+	return 0;
 }
 
 
