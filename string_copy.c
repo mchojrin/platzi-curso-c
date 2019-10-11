@@ -8,4 +8,6 @@ int main()
 
 	strcpy( dst, src );
 	printf( "dst = %s\n", dst );
+
+	return 0;
 }
