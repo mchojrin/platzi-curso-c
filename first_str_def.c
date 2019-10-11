@@ -4,5 +4,7 @@ int main()
 {
 	char name[5] = "Mauro";
 
-	printf("Nombre = %s\n", name);
+	printf("Nombre = %5s\n", name);
+
+	return 0;
 }
