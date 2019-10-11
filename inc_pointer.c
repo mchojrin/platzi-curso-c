@@ -11,4 +11,6 @@ int main()
 	pi++;
 	pc++;
 	printf( "Despues pi = %p, pc = %p\n", pi, pc );
+
+	return 0;
 }
