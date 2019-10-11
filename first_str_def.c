@@ -2,9 +2,9 @@
 
 int main()
 {
-	char name[5] = "Mauro";
+	char * name = "Mauro";
 
-	printf("Nombre = %5s\n", name);
+	printf("Nombre = %s\n", name);
 
 	return 0;
 }
