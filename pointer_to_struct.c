@@ -2,12 +2,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct {
+struct PERSON {
 		char name[100];
 		int age;
-	} PERSON;
+	};
 
-void fillPersonData( PERSON * person, const char * name, int age )
+void fillPersonData( struct PERSON * person, const char * name, int age )
 {
 	if ( strlen( name ) < 100 ) {
 		strcpy( (*person).name, name );
@@ -17,7 +17,7 @@ void fillPersonData( PERSON * person, const char * name, int age )
 
 int main( int argc, const char * argv[] )
 {
-	PERSON person;
+	struct PERSON person;
 
 	if ( argc < 3 ) {
 		printf( "Indique nombre y edad por favor\n" );

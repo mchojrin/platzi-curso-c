@@ -9,4 +9,6 @@ int main( int argc, const char * argv[] )
 	printf("Original buffer2: %s\n", buffer2 );
 	strcpy( buffer, argv[1] );
 	printf("New buffer2: %s\n", buffer2 );
+
+	return 0;
 }
