@@ -2,7 +2,7 @@
 
 int main()
 {
-	char name[5] = "Mauro";
+	char * name = "Mauro";
 
 	printf("Nombre = %s (%p) \n", name, name);
 
