@@ -4,5 +4,5 @@ int main()
 {
 	int number;
 
-	printf("%p", &pointToNumber);
+	printf("%p\n", &number);
 }
