@@ -2,7 +2,7 @@
 
 void duplicar( int * a )
 {
-	*a *= 2;
+	*a *= 2; 
 }
 
 int main()

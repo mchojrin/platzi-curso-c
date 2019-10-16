@@ -13,6 +13,5 @@ int main( int argc, char * argv[] )
 		sleep(1);
 	}
 	printf("Liberando p\n");
-	free(p);
 	printf( "Terminado!\n" );
 }
