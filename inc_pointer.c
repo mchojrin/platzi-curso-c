@@ -2,10 +2,10 @@
 
 int main()
 {
-	int a = 5;
-	int * pi = &a;
+	int n = 5;
+	int * pi = &n;
 	char c = 'A';
-	char * pc;
+	char * pc = &c;
 
 	printf( "Antes pi = %p y pc = %p\n", pi, pc );
 	pi++;
